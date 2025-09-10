@@ -4,7 +4,6 @@ import java.io.Serializable
 
 data class informativePage(
     val title: String,
-    val description: String,
-    val poster: String
+    val description: String
 ): Serializable
 

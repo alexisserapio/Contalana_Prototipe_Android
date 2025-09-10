@@ -10,5 +10,5 @@
     <string name="infoPoster.description.two">Supervisa fácilmente las ganancias y los gastos de tu negocio. Además obten proyecciones a futuro, todo en un solo lugar</string>
     <string name="infoPoster.title.three">Contalana apoya al crecimiento de mi negocio</string>
     <string name="infoPoster.description.three">¡Trabajemos juntos para lograr sacar el máximo potencial de tu negocio!</string>
-    <string name="infoPoster.firstImage" translatable="false">@drawable/mockup</string>
+    <string name="infoPoster.button">Continuar</string>
 </resources>

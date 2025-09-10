@@ -12,9 +12,15 @@ import com.alexisserapio.contalana_prototipe.a.model.informativePage
 class ViewPagerAdapter(private val items: List<informativePage>) : RecyclerView.Adapter<ViewPagerAdapter.PageViewHolder>() {
     class PageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val pageImage: ImageView = itemView.findViewById(R.id.ivMockup)
-        val pageTopText: TextView = itemView.findViewById(R.id.topLabel)
-        val pageBotText: TextView = itemView.findViewById(R.id.bottomLabel)
+        val pageImage = itemView.findViewById<ImageView>(R.id.ivMockup)
+        val pageTopText = itemView.findViewById<TextView>(R.id.topLabel)
+        val pageBotText = itemView.findViewById<TextView>(R.id.bottomLabel)
+
+        fun render(informativePage: informativePage){
+            pageImage.setImageResource(R.drawable.mockup)
+            pageTopText.text = informativePage.title
+            pageBotText.text = informativePage.description
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PageViewHolder {
@@ -24,14 +30,7 @@ class ViewPagerAdapter(private val items: List<informativePage>) : RecyclerView.
 
     override fun onBindViewHolder(holder: PageViewHolder, position: Int) {
         val item = items[position]
-        val context = holder.pageImage.context
-        val imageName = item.poster
-        val resourceId = context.resources.getIdentifier(imageName, "drawable", context.packageName)
-
-    // Ahora puedes usar el ID de recurso para establecer la imagen
-        holder.pageImage.setImageResource(resourceId)
-        holder.pageTopText.text = item.title
-        holder.pageBotText.text = item.description
+        holder.render(item)
     }
 
     override fun getItemCount(): Int = items.size

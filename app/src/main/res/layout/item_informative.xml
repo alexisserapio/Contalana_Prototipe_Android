@@ -7,9 +7,12 @@
 
     <ImageView
         android:id="@+id/ivMockup"
-        android:layout_width="200dp"
-        android:layout_height="395dp"
-        android:translationY="-90dp" />
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/mockup"
+        android:translationY="0dp" />
 
     <TextView
         android:id="@+id/topLabel"
@@ -18,10 +21,11 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:fontFamily="sans-serif-black"
-        android:textSize="26sp"
-        android:translationY="-70dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:textSize="28sp"
+        android:hint="@string/infoPoster.title.one"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/black"/>
 
     <TextView
@@ -29,11 +33,13 @@
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="sans-serif"
         android:textSize="16sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:translationY="-40dp"/>
+        android:hint="@string/welcome.sublabel"
+        android:textColor="@color/black"/>
 
 
 </LinearLayout>
