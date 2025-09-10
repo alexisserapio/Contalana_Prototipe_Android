@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Contalana</string>
-    <string name="welcomeLabel">Bienvenido a Contalana</string>
-    <string name="welcomSubLabel">Logremos todas las metas y objetivos para tu negocio juntos</string>
-    <string name="welcomeButton">Hagámoslo</string>
+    <string name="welcome.title">Bienvenido a Contalana</string>
+    <string name="welcome.sublabel">Logremos todas las metas y objetivos para tu negocio juntos</string>
+    <string name="welcome.button">Hagámoslo</string>
+    <string name="informative.button">Continuar</string>
+    <string name="infoPoster.title.one">Contalana ayuda con el manejo de mi negocio</string>
+    <string name="infoPoster.description.one">Con Contalana, lleva un mejor control de los productos de tu negocio de una manera rápida e intuitiva</string>
+    <string name="infoPoster.title.two">Contalana hace que la gestión financiera sea sencilla</string>
+    <string name="infoPoster.description.two">Supervisa fácilmente las ganancias y los gastos de tu negocio. Además obten proyecciones a futuro, todo en un solo lugar</string>
+    <string name="infoPoster.title.three">Contalana apoya al crecimiento de mi negocio</string>
+    <string name="infoPoster.description.three">¡Trabajemos juntos para lograr sacar el máximo potencial de tu negocio!</string>
+    <string name="infoPoster.firstImage" translatable="false">@drawable/mockup</string>
 </resources>

@@ -1,6 +1,14 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Contalana</string>
-    <string name="welcomeLabel">Welcome to Contalana</string>
-    <string name="welcomSubLabel">Let\'s achieve all the goals and objectives for your business together</string>
-    <string name="welcomeButton">Let\'s do it</string>
+    <string name="welcome.title">Welcome to Contalana</string>
+    <string name="welcome.sublabel">Let\'s achieve all the goals and objectives for your business together</string>
+    <string name="welcome.button">Let\'s do it</string>
+    <string name="informative.button">Continue</string>
+    <string name="infoPoster.title.one">Contalana helps with managing my business</string>
+    <string name="infoPoster.description.one">With Contalana, keep a better track of your business\'s products in a fast and intuitive way</string>
+    <string name="infoPoster.title.two">Contalana makes financial management simple</string>
+    <string name="infoPoster.description.two">Easily monitor your business\'s profits and expenses. Plus, get future projections, all in one place</string>
+    <string name="infoPoster.title.three">Contalana supports my business\'s growth</string>
+    <string name="infoPoster.description.three">Let\'s work together to unlock your business\'s full potential!</string>
+    <string name="infoPoster.firstImage" translatable="false" tools:ignore="ReferenceType">@drawable/mockup</string>
 </resources>

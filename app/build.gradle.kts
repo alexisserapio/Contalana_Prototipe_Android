@@ -51,4 +51,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //PageController
+    implementation(libs.androidx.viewpager2)
+    //PageIndicator
+    implementation(libs.material.v190)
 }

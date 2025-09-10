@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contalana_Prototipe">
         <activity
-            android:name=".controller.informativeActivity"
+            android:name=".a.informativeActivity"
             android:exported="false" />
         <activity
-            android:name=".controller.welcomeActivity"
+            android:name=".a.welcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
