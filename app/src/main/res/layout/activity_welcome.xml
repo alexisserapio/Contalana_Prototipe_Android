@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/welcomeImage"
+        android:layout_width="2000dp"
+        android:layout_height="1600dp"
+        android:scaleType="matrix"
+        android:src="@drawable/logo"
+        android:translationX="-800dp"
+        android:translationY="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/welcomeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:gravity="center"
+        android:text="@string/welcomeLabel"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeSubLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcomSubLabel"
+        android:gravity="center"
+        android:lineBreakStyle="normal"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="-150dp"/>
+
+    <Button
+        android:id="@+id/welcomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-10dp"
+        android:text="@string/welcomeButton"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeSubLabel"
+        android:backgroundTint="@color/CL_darkBlue"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

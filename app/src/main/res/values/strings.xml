@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Contalana</string>
+    <string name="welcomeLabel">Bienvenido a Contalana</string>
+    <string name="welcomSubLabel">Logremos todas las metas y objetivos para tu negocio juntos</string>
+    <string name="welcomeButton">Hagámoslo</string>
+</resources>
