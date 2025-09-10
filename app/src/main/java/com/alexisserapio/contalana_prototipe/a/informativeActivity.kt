@@ -1,5 +1,7 @@
 package com.alexisserapio.contalana_prototipe.a
 
+import FadePageTransformer
+import android.animation.ValueAnimator
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -43,22 +45,43 @@ class informativeActivity : AppCompatActivity() {
 
         val adapter = ViewPagerAdapter(informativeData)
         binding.viewPager.adapter = adapter
+        binding.viewPager.setPageTransformer(FadePageTransformer())
+
         // Vincular ViewPager2 con TabLayout (dots)
         // Sincroniza el TabLayout y el ViewPager2 y asigna los "drawables"
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
             // En lugar de texto, asignamos un ícono o drawable para la pestaña
             // Es necesario un "drawable" para que el indicador se muestre
-            tab.icon = unselectedDot
+            val initialDot = createDotDrawable(false)
+            tab.icon = initialDot
         }.attach()
 
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                // Iterar sobre todas las pestañas para actualizar sus "drawables"
-                for (i in 0 until binding.tabLayout.tabCount) {
-                    val tab = binding.tabLayout.getTabAt(i)
-                    if (tab != null) {
-                        tab.icon = if (i == position) selectedDot else unselectedDot
-                    }
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                val selectedColor = getColor(R.color.darkestGreen)
+                val unselectedColor = getColor(R.color.backgroundGreen)
+
+                // Pestaña actual
+                val currentTab = binding.tabLayout.getTabAt(position)
+                val currentDot = currentTab?.icon as? GradientDrawable
+
+                // Pestaña siguiente (si existe)
+                val nextTab = binding.tabLayout.getTabAt(position + 1)
+                val nextDot = nextTab?.icon as? GradientDrawable
+
+                // Calcula el color intermedio usando ArgbEvaluator
+                val evaluator = android.animation.ArgbEvaluator()
+
+                // Anima el punto actual de seleccionado a no seleccionado
+                if (currentDot != null) {
+                    val animatedColor = evaluator.evaluate(positionOffset, selectedColor, unselectedColor) as Int
+                    currentDot.setColor(animatedColor)
+                }
+
+                // Anima el punto siguiente de no seleccionado a seleccionado
+                if (nextDot != null) {
+                    val animatedColor = evaluator.evaluate(positionOffset, unselectedColor, selectedColor) as Int
+                    nextDot.setColor(animatedColor)
                 }
             }
         })
@@ -73,13 +96,13 @@ class informativeActivity : AppCompatActivity() {
         val dotColor = if (isSelected) {
             getColor(R.color.darkestGreen) // El color del punto seleccionado
         } else {
-            getColor(R.color.CL_darkGreen) // El color del punto no seleccionado
+            getColor(R.color.backgroundGreen) // El color del punto no seleccionado
         }
 
         return GradientDrawable().apply {
             shape = GradientDrawable.OVAL
             setColor(dotColor)
-            setSize(32, 32)
+            setSize(30, 30)
         }
     }
 

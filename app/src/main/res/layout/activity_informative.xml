@@ -12,22 +12,31 @@
         android:layout_width="match_parent"
         android:layout_height="590dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:animateLayoutChanges="true"/>
 
     <!-- Indicadores de página (dots) -->
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="100dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="105dp"
+        android:layout_marginBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="120dp"
-        app:tabIndicatorHeight="5dp"
-        app:tabIconTint="@null"
-        app:tabIndicatorColor="@color/darkestGreen"/>
+        app:cardBackgroundColor="@color/CL_darkGreen"
+        app:strokeColor="@color/CL_darkGreen"
+        app:cardCornerRadius="12dp">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:tabIconTint="@null"
+            app:tabIndicatorColor="@color/CL_darkGreen"
+            android:background="@android:color/transparent"
+            app:tabRippleColor="@color/CL_darkGreen"/>
+    </com.google.android.material.card.MaterialCardView>
 
     <Button
         android:id="@+id/informativeButton"
