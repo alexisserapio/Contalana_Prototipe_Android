@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Welcome Activity -->
     <string name="app_name">Contalana</string>
     <string name="welcome.title">Welcome to Contalana</string>
     <string name="welcome.sublabel">Let\'s achieve all the goals and objectives for your business together</string>
     <string name="welcome.button">Let\'s do it</string>
+    <!-- Informative Activity -->
     <string name="informative.button">Continue</string>
     <string name="infoPoster.title.one">Contalana helps with managing my business</string>
     <string name="infoPoster.description.one">With Contalana, keep a better track of your business\'s products in a fast and intuitive way</string>
@@ -11,4 +13,13 @@
     <string name="infoPoster.title.three">Contalana supports my business\'s growth</string>
     <string name="infoPoster.description.three">Let\'s work together to unlock your business\'s full potential!</string>
     <string name="infoPoster.button">Continue</string>
+    <!-- BName Activity -->
+    <string name="bName.title">Are you ready to take your business management to the next level?</string>
+    <string name="bName.subtitle">What name would you like us to use to refer to your business?</string>
+    <string name="bName.button">I like this one</string>
+    <string name="bName.forms.bname">\"EZ Store\"</string>
+    <string name="bName.forms.error">Write a name for your business</string>
+    <!-- Tutorial? Activity -->
+    <string name="tutorialstring">We are ready to start a new age in %1$s!</string>
+    <string name="tutorialstring2">Learn how Contalana works for you...</string>
 </resources>

@@ -44,7 +44,7 @@ class welcomeActivity : AppCompatActivity() {
         }
 
         binding.welcomeButton.setOnClickListener {
-            val segueToInformativeAct = Intent(this, informativeActivity::class.java)
+            val segueToInformativeAct = Intent(this, InformativeActivity::class.java)
             startActivity(segueToInformativeAct)
             finish()
         }

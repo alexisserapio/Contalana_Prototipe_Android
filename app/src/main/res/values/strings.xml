@@ -1,8 +1,10 @@
 <resources>
+    <!-- Welcome Activity -->
     <string name="app_name">Contalana</string>
     <string name="welcome.title">Bienvenido a Contalana</string>
     <string name="welcome.sublabel">Logremos todas las metas y objetivos para tu negocio juntos</string>
     <string name="welcome.button">Hagámoslo</string>
+    <!-- Informative Activity -->
     <string name="informative.button">Continuar</string>
     <string name="infoPoster.title.one">Contalana ayuda con el manejo de mi negocio</string>
     <string name="infoPoster.description.one">Con Contalana, lleva un mejor control de los productos de tu negocio de una manera rápida e intuitiva</string>
@@ -11,4 +13,13 @@
     <string name="infoPoster.title.three">Contalana apoya al crecimiento de mi negocio</string>
     <string name="infoPoster.description.three">¡Trabajemos juntos para lograr sacar el máximo potencial de tu negocio!</string>
     <string name="infoPoster.button">Continuar</string>
+    <!-- BName Activity -->
+    <string name="bName.title">¿Estás listo para llevar la gestión de tu negocio a otro nivel?</string>
+    <string name="bName.subtitle">¿Con que nombre te gustaría que nos refirieramos a tu negocio?</string>
+    <string name="bName.button">Este me agrada</string>
+    <string name="bName.forms.bname">Abarrotes \"La esquinita\"</string>
+    <string name="bName.forms.error">Ingresa el nombre de tu negocio</string>
+    <!-- Tutorial? Activity -->
+    <string name="tutorialstring">¡Estamos listos para empezar una nueva etapa en %1$s!</string>
+    <string name="tutorialstring2">Conoce como Contalana trabaja para tí...</string>
 </resources>
