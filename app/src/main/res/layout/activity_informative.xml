@@ -5,19 +5,56 @@
     android:id="@+id/informative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".a.informativeActivity">
+    tools:context=".a.InformativeActivity">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="590dp"
-        android:layout_marginTop="20dp"
+    <ImageView
+        android:id="@+id/ivMockup"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mockup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:animateLayoutChanges="true"/>
+        app:layout_constraintVertical_bias="0.150000" />
+
+    <TextView
+        android:id="@+id/topLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:hint="@string/infoPoster.title.one"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ivMockup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/bottomLabel"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:hint="@string/welcome.sublabel"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/topLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Indicadores de página (dots) -->
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="120dp"
@@ -31,7 +68,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             app:tabIconTint="@null"
             app:tabIndicatorColor="@color/CL_darkGreen"
             android:background="@android:color/transparent"

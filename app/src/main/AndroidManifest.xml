@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contalana_Prototipe">
         <activity
-            android:name=".a.informativeActivity"
+            android:name=".a.TutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".a.BNameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".a.InformativeActivity"
             android:exported="false" />
         <activity
             android:name=".a.welcomeActivity"
