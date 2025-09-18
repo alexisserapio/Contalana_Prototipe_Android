@@ -1,8 +1,5 @@
 package com.alexisserapio.contalana_prototipe.a
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.graphics.drawable.GradientDrawable
@@ -12,15 +9,12 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.alexisserapio.contalana_prototipe.R
 import com.alexisserapio.contalana_prototipe.a.model.informativePage
 import com.alexisserapio.contalana_prototipe.databinding.ActivityInformativeBinding
 import com.google.android.material.tabs.TabLayout
-import androidx.transition.Fade
-import androidx.transition.TransitionManager
 
 
 class InformativeActivity : AppCompatActivity() {

@@ -1,5 +1,6 @@
 package com.alexisserapio.contalana_prototipe.a
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Matrix
 import android.os.Bundle
@@ -28,8 +29,14 @@ class welcomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val animator = ObjectAnimator.ofFloat(binding.welcomeImage, "rotation", 0f, 45f)
+        animator.duration = 500 // duración en ms
+        animator.start()
+
+
         //Setear la matriz de la imagen para utilizarla en el Style
-        binding.welcomeImage.post {
+        /*binding.welcomeImage.post {
             val matrix = Matrix()
 
             val drawable = binding.welcomeImage.drawable ?: return@post
@@ -41,7 +48,7 @@ class welcomeActivity : AppCompatActivity() {
 
 
             binding.welcomeImage.imageMatrix = matrix
-        }
+        }*/
 
         binding.welcomeButton.setOnClickListener {
             val segueToInformativeAct = Intent(this, InformativeActivity::class.java)
