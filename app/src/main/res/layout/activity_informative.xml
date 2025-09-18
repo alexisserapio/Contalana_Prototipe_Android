@@ -9,15 +9,15 @@
 
     <ImageView
         android:id="@+id/ivMockup"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_width="500dp"
+        android:layout_height="420dp"
         android:scaleType="fitCenter"
         android:src="@drawable/mockup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.150000" />
+        app:layout_constraintVertical_bias="0.12500" />
 
     <TextView
         android:id="@+id/topLabel"

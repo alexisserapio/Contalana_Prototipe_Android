@@ -1,5 +1,6 @@
 package com.alexisserapio.contalana_prototipe.a
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Matrix
@@ -30,25 +31,24 @@ class welcomeActivity : AppCompatActivity() {
             insets
         }
 
-        val animator = ObjectAnimator.ofFloat(binding.welcomeImage, "rotation", 0f, 45f)
-        animator.duration = 500 // duración en ms
-        animator.start()
 
+        val animateBlueSquare = ObjectAnimator.ofFloat(binding.welcomeSquareblue, "rotation", 0f, 25f)
+        val animateGreenSquare = ObjectAnimator.ofFloat(binding.welcomeSquaregreen, "rotation", 0f, -25f)
+        animateBlueSquare.duration = 800 // duración en ms
+        animateGreenSquare.duration = 800 // duración en ms
 
-        //Setear la matriz de la imagen para utilizarla en el Style
-        /*binding.welcomeImage.post {
-            val matrix = Matrix()
+        val animateTitle = ObjectAnimator.ofFloat(binding.welcomeLabel, "alpha", 0f, 1f)
+        val animateSubtitle = ObjectAnimator.ofFloat(binding.welcomeSubLabel, "alpha", 0f, 1f)
+        val animateButton = ObjectAnimator.ofFloat(binding.welcomeButton, "alpha", 0f, 1f)
 
-            val drawable = binding.welcomeImage.drawable ?: return@post
+        animateTitle.duration = 800 // duración en ms
+        animateSubtitle.duration = 500 // duración en ms
+        animateButton.duration = 500 // duración en ms
 
-            // Escalar para que la imagen quepa en el ImageView
-            val scaleX = binding.welcomeImage.width.toFloat() / drawable.intrinsicWidth
-            val scaleY = binding.welcomeImage.height.toFloat() / drawable.intrinsicHeight
-            matrix.setScale(scaleX, scaleY)
-
-
-            binding.welcomeImage.imageMatrix = matrix
-        }*/
+        val set = AnimatorSet()
+        set.playSequentially(animateBlueSquare, animateTitle, animateSubtitle, animateButton)
+        animateGreenSquare.start()
+        set.start()
 
         binding.welcomeButton.setOnClickListener {
             val segueToInformativeAct = Intent(this, InformativeActivity::class.java)
