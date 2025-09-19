@@ -9,5 +9,5 @@
     <color name="CL_lightBlue">#61CBF4</color>
     <color name="CL_lightGreen">#8ED973</color>
     <color name="darkestGreen">#004E03</color>
-    <color name="textColor">#FF000000</color>
+    <color name="textColor">#FFFFFFFF</color>
 </resources>

@@ -1,5 +1,7 @@
 package com.alexisserapio.contalana_prototipe.a
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.graphics.Matrix
 import android.os.Bundle
@@ -28,20 +30,25 @@ class welcomeActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Setear la matriz de la imagen para utilizarla en el Style
-        binding.welcomeImage.post {
-            val matrix = Matrix()
-
-            val drawable = binding.welcomeImage.drawable ?: return@post
-
-            // Escalar para que la imagen quepa en el ImageView
-            val scaleX = binding.welcomeImage.width.toFloat() / drawable.intrinsicWidth
-            val scaleY = binding.welcomeImage.height.toFloat() / drawable.intrinsicHeight
-            matrix.setScale(scaleX, scaleY)
 
 
-            binding.welcomeImage.imageMatrix = matrix
-        }
+        val animateBlueSquare = ObjectAnimator.ofFloat(binding.welcomeSquareblue, "rotation", 0f, 25f)
+        val animateGreenSquare = ObjectAnimator.ofFloat(binding.welcomeSquaregreen, "rotation", 0f, -25f)
+        animateBlueSquare.duration = 800 // duración en ms
+        animateGreenSquare.duration = 800 // duración en ms
+
+        val animateTitle = ObjectAnimator.ofFloat(binding.welcomeLabel, "alpha", 0f, 1f)
+        val animateSubtitle = ObjectAnimator.ofFloat(binding.welcomeSubLabel, "alpha", 0f, 1f)
+        val animateButton = ObjectAnimator.ofFloat(binding.welcomeButton, "alpha", 0f, 1f)
+
+        animateTitle.duration = 800 // duración en ms
+        animateSubtitle.duration = 500 // duración en ms
+        animateButton.duration = 500 // duración en ms
+
+        val set = AnimatorSet()
+        set.playSequentially(animateBlueSquare, animateTitle, animateSubtitle, animateButton)
+        animateGreenSquare.start()
+        set.start()
 
         binding.welcomeButton.setOnClickListener {
             val segueToInformativeAct = Intent(this, InformativeActivity::class.java)

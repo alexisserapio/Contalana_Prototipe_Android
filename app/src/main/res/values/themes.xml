@@ -1,9 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Contalana_Prototipe" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/CL_lightGreen</item>
     </style>
-
-    <style name="Theme.Contalana_Prototipe" parent="Base.Theme.Contalana_Prototipe" />
 </resources>
