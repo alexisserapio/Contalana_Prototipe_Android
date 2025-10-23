@@ -22,12 +22,11 @@ class welcomeActivity : AppCompatActivity() {
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
 
         enableEdgeToEdge()
-        //setContentView(R.layout.activity_welcome)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
 
@@ -40,16 +39,27 @@ class welcomeActivity : AppCompatActivity() {
         val animateTitle = ObjectAnimator.ofFloat(binding.welcomeLabel, "alpha", 0f, 1f)
         val animateSubtitle = ObjectAnimator.ofFloat(binding.welcomeSubLabel, "alpha", 0f, 1f)
         val animateButton = ObjectAnimator.ofFloat(binding.welcomeButton, "alpha", 0f, 1f)
+        val animateTerms = ObjectAnimator.ofFloat(binding.welcomeTerms, "alpha", 0f, 1f)
+        val animateSignIn = ObjectAnimator.ofFloat(binding.welcomeSignIn, "alpha", 0f, 1f)
 
         animateTitle.duration = 800 // duración en ms
         animateSubtitle.duration = 500 // duración en ms
         animateButton.duration = 500 // duración en ms
+        animateTerms.duration = 500
+        animateSignIn.duration = 500
 
         val set = AnimatorSet()
-        set.playSequentially(animateBlueSquare, animateTitle, animateSubtitle, animateButton)
+        val set2 = AnimatorSet()
+        set.playSequentially(animateBlueSquare, animateTitle, animateSubtitle)
+        set2.playTogether( animateButton, animateTerms)
         animateGreenSquare.start()
         set.start()
-
+        binding.root.postDelayed({
+            set2.start()
+        }, 2200)
+        binding.root.postDelayed({
+            animateSignIn.start()
+        },2700)
         binding.welcomeButton.setOnClickListener {
             val segueToInformativeAct = Intent(this, InformativeActivity::class.java)
             startActivity(segueToInformativeAct)

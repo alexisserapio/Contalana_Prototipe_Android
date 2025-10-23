@@ -30,17 +30,18 @@
         android:id="@+id/welcomeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="220dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
+        app:layout_constraintVertical_bias="0.625"
         android:text="@string/welcome.title"
         android:textColor="@color/white"
         android:textSize="46sp"
         android:textStyle="bold"
-        android:layout_marginEnd="10dp"
-        android:alpha="0"
-        android:fontFamily="sans-serif-medium"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/welcomeSubLabel"
@@ -49,32 +50,69 @@
         android:text="@string/welcome.sublabel"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeLabel"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="-150dp"/>
+        app:layout_constraintVertical_bias="0.1"/>
 
     <Button
         android:alpha="0"
         android:id="@+id/welcomeButton"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="58dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="-30dp"
         android:text="@string/welcome.button"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:cornerRadius="12dp"
+        app:cornerRadius="18dp"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeSubLabel"
-        android:backgroundTint="@color/CL_darkBlue"/>
+        android:backgroundTint="@color/CL_darkBlue"
+        app:layout_constraintVertical_bias="0.35"
+        />
+
+    <TextView
+        android:id="@+id/welcomeTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome.terms"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/welcomeSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome.signin"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="0"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTerms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

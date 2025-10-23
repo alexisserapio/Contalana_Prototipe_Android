@@ -4,6 +4,9 @@
     <string name="welcome.title">Welcome to Contalana</string>
     <string name="welcome.sublabel">Let\'s achieve all the goals and objectives for your business together</string>
     <string name="welcome.button">Let\'s do it</string>
+    <string name="welcome.terms">By continuing, you agree to Contalana\'s Terms and Conditions and Privacy Policy.</string>
+    <string name="welcome.signin">Already have an account?  Sign In</string>
+
     <!-- Informative Activity -->
     <string name="informative.button">Continue</string>
     <string name="infoPoster.title.one">Contalana helps with managing my business</string>

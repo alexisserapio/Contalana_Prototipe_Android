@@ -2,8 +2,11 @@
     <!-- Welcome Activity -->
     <string name="app_name">Contalana</string>
     <string name="welcome.title">Bienvenido a Contalana</string>
-    <string name="welcome.sublabel">Logremos todas las metas y objetivos para tu negocio juntos</string>
+    <string name="welcome.sublabel">¡Logremos todas las metas y objetivos para tu negocio juntos!</string>
     <string name="welcome.button">Hagámoslo</string>
+    <string name="welcome.terms">Al continuar, aceptas los Términos y Condiciones de Contalana y la Política de Privacidad.</string>
+    <string name="welcome.signin">¿Ya tienes una cuenta?  Iniciar Sesión</string>
+
     <!-- Informative Activity -->
     <string name="informative.button">Continuar</string>
     <string name="infoPoster.title.one">Contalana ayuda con el manejo de mi negocio</string>
