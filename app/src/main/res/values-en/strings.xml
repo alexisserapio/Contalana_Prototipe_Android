@@ -6,6 +6,9 @@
     <string name="welcome.button">Let\'s do it</string>
     <string name="welcome.terms">By continuing, you agree to Contalana\'s Terms and Conditions and Privacy Policy.</string>
     <string name="welcome.signin">Already have an account?  Sign In</string>
+    <string name="welcome.terms.label">Contalana\'s Terms and Conditions</string>
+    <string name="welcome.terms.policy">Privacy Policy</string>
+    <string name="welcome.signin.label">Sign In</string>
 
     <!-- Informative Activity -->
     <string name="informative.button">Continue</string>

@@ -6,6 +6,9 @@
     <string name="welcome.button">Hagámoslo</string>
     <string name="welcome.terms">Al continuar, aceptas los Términos y Condiciones de Contalana y la Política de Privacidad.</string>
     <string name="welcome.signin">¿Ya tienes una cuenta?  Iniciar Sesión</string>
+    <string name="welcome.terms.label">Términos y Condiciones de Contalana</string>
+    <string name="welcome.terms.policy">Política de Privacidad</string>
+    <string name="welcome.signin.label">Iniciar Sesión</string>
 
     <!-- Informative Activity -->
     <string name="informative.button">Continuar</string>
