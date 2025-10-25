@@ -10,4 +10,6 @@
     <color name="CL_lightGreen">#8ED973</color>
     <color name="darkestGreen">#004E03</color>
     <color name="textColor">#FF000000</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="grey">#6A6A6A</color>
 </resources>

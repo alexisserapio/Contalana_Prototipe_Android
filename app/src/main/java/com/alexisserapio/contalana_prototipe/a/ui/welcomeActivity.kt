@@ -1,24 +1,24 @@
-package com.alexisserapio.contalana_prototipe.a
+package com.alexisserapio.contalana_prototipe.a.ui
 
-import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.TextPaint
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.alexisserapio.contalana_prototipe.R
+import com.alexisserapio.contalana_prototipe.a.utils.Constants
 import com.alexisserapio.contalana_prototipe.databinding.ActivityWelcomeBinding
-import android.net.Uri
-import android.text.SpannableString
-import android.text.style.ClickableSpan
-import android.util.Log
-import android.view.View
-import androidx.core.content.ContextCompat
-import com.alexisserapio.contalana_prototipe.a.utils.Constants.TERMS_URL
-import androidx.core.net.toUri
 
 class welcomeActivity : AppCompatActivity() {
 
@@ -91,14 +91,15 @@ class welcomeActivity : AppCompatActivity() {
         // Primer clickable span
         val clickableSpan1 = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                val intent = Intent(Intent.ACTION_VIEW, TERMS_URL.toUri())
+                val intent = Intent(Intent.ACTION_VIEW, Constants.TERMS_URL.toUri())
                 widget.context.startActivity(intent)
             }
 
-            override fun updateDrawState(ds: android.text.TextPaint) {
+            override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.color = ContextCompat.getColor(binding.welcomeTerms.context, R.color.CL_darkBlue)
-                ds.isUnderlineText = false
+                ds.isUnderlineText = true
+                ds.typeface = Typeface.create(ds.typeface, Typeface.BOLD)
             }
         }
 
@@ -119,14 +120,15 @@ class welcomeActivity : AppCompatActivity() {
 
         val clickableSpan2 = object : ClickableSpan() {
             override fun onClick(widget: View) {
-                val intent = Intent(Intent.ACTION_VIEW, TERMS_URL.toUri())
+                val intent = Intent(Intent.ACTION_VIEW, Constants.TERMS_URL.toUri())
                 widget.context.startActivity(intent)
             }
 
-            override fun updateDrawState(ds: android.text.TextPaint) {
+            override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
                 ds.color = ContextCompat.getColor(binding.welcomeTerms.context, R.color.CL_darkBlue)
-                ds.isUnderlineText = false
+                ds.isUnderlineText = true
+                ds.typeface = Typeface.create(ds.typeface, Typeface.BOLD)
             }
         }
 
@@ -149,7 +151,7 @@ class welcomeActivity : AppCompatActivity() {
         binding.welcomeTerms.text = spannableString
 
         // 5. ¡CRUCIAL! Habilita los clics
-        binding.welcomeTerms.movementMethod = android.text.method.LinkMovementMethod.getInstance()
+        binding.welcomeTerms.movementMethod = LinkMovementMethod.getInstance()
 
         // Opcional: Esto ayuda a que el color del span se vea correctamente
         binding.welcomeTerms.highlightColor = ContextCompat.getColor(binding.welcomeTerms.context, android.R.color.transparent)
@@ -172,10 +174,12 @@ class welcomeActivity : AppCompatActivity() {
 
             }
 
-            override fun updateDrawState(ds: android.text.TextPaint) {
+            override fun updateDrawState(ds: TextPaint) {
                 super.updateDrawState(ds)
+
                 ds.color = ContextCompat.getColor(binding.welcomeSignIn.context, R.color.CL_darkBlue)
                 ds.isUnderlineText = false
+                ds.typeface = Typeface.create(ds.typeface, Typeface.BOLD)
             }
         }
 
@@ -196,7 +200,7 @@ class welcomeActivity : AppCompatActivity() {
         // 4. Establece el SpannableString en el TextView (SOLO UNA VEZ)
         binding.welcomeSignIn.text = spannableString
         // 5. ¡CRUCIAL! Habilita los clics
-        binding.welcomeSignIn.movementMethod = android.text.method.LinkMovementMethod.getInstance()
+        binding.welcomeSignIn.movementMethod = LinkMovementMethod.getInstance()
 
         binding.welcomeSignIn.highlightColor = ContextCompat.getColor(binding.welcomeSignIn.context, android.R.color.transparent)
 

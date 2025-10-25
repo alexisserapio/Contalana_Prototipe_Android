@@ -1,4 +1,4 @@
-package com.alexisserapio.contalana_prototipe.a
+package com.alexisserapio.contalana_prototipe.a.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.alexisserapio.contalana_prototipe.R
-import com.alexisserapio.contalana_prototipe.databinding.ActivityTutorialBinding
+import com.alexisserapio.contalana_prototipe.databinding.ActivityFormBinding
 
-class TutorialActivity : AppCompatActivity() {
+class FormActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTutorialBinding
+    private lateinit var binding: ActivityFormBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        binding = ActivityTutorialBinding.inflate(layoutInflater)
+        binding = ActivityFormBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

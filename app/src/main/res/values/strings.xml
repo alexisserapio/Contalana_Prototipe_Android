@@ -24,8 +24,12 @@
     <string name="bName.subtitle">¿Con que nombre te gustaría que nos refirieramos a tu negocio?</string>
     <string name="bName.button">Este me agrada</string>
     <string name="bName.forms.bname">Abarrotes \"La esquinita\"</string>
-    <string name="bName.forms.error">Ingresa el nombre de tu negocio</string>
+    <string name="bName.alert.title">Ingresa un nombre válido</string>
+    <string name="bName.alert.empty">El nombre de tu negocio está vacío</string>
+    <string name="bName.alert.notValid">Utiliza entre 5 y 32 caracteres, incluyendo letras, números y los simbolos: . _ $ &amp; /</string>
+    <string name="bName.alert.button">Aceptar"</string>
+
     <!-- Tutorial? Activity -->
     <string name="tutorialstring">¡Estamos listos para empezar una nueva etapa en %1$s!</string>
-    <string name="tutorialstring2">Conoce como Contalana trabaja para tí...</string>
+
 </resources>

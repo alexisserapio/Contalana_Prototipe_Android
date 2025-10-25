@@ -1,5 +1,6 @@
-package com.alexisserapio.contalana_prototipe.a
+package com.alexisserapio.contalana_prototipe.a.ui
 
+import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.content.Intent
 import android.graphics.drawable.GradientDrawable
@@ -15,7 +16,6 @@ import com.alexisserapio.contalana_prototipe.R
 import com.alexisserapio.contalana_prototipe.a.model.informativePage
 import com.alexisserapio.contalana_prototipe.databinding.ActivityInformativeBinding
 import com.google.android.material.tabs.TabLayout
-
 
 class InformativeActivity : AppCompatActivity() {
 
@@ -201,7 +201,7 @@ class InformativeActivity : AppCompatActivity() {
         val selectedColor = getColor(R.color.darkestGreen)
         val unselectedColor = getColor(R.color.backgroundGreen)
 
-        val evaluator = android.animation.ArgbEvaluator()
+        val evaluator = ArgbEvaluator()
 
         val animator = ValueAnimator.ofFloat(0f, 1f)
         animator.duration = 300 // duración de la animación
@@ -263,4 +263,3 @@ class InformativeActivity : AppCompatActivity() {
             }.start()
     }
 }
-

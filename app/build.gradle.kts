@@ -47,12 +47,22 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.androidx.material3)
 
+    //Mis Implementaciones
     //PageController
     implementation(libs.androidx.viewpager2)
     //PageIndicator
     implementation(libs.material.v190)
+    //Tink
+    implementation(libs.tink.android)
+    //datastore preferences
+    implementation(libs.androidx.datastore.preferences)
+    //lifecycle
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
 }

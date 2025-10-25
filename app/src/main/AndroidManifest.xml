@@ -14,19 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contalana_Prototipe">
         <activity
-            android:name=".a.SignInActivity"
+            android:name=".a.ui.BNameDialogActivity"
             android:exported="false" />
         <activity
-            android:name=".a.TutorialActivity"
+            android:name=".a.ui.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".a.BNameActivity"
+            android:name=".a.ui.FormActivity"
             android:exported="false" />
         <activity
-            android:name=".a.InformativeActivity"
+            android:name=".a.ui.BNameActivity"
             android:exported="false" />
         <activity
-            android:name=".a.welcomeActivity"
+            android:name=".a.ui.InformativeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".a.ui.welcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.alexisserapio.contalana_prototipe.a
+package com.alexisserapio.contalana_prototipe.a.ui
 
 import android.os.Build
 import android.os.Bundle
@@ -8,7 +8,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.alexisserapio.contalana_prototipe.R
 import com.alexisserapio.contalana_prototipe.databinding.ActivitySignInBinding
-
 
 class SignInActivity : AppCompatActivity() {
 
@@ -39,6 +38,7 @@ class SignInActivity : AppCompatActivity() {
 
             );
         }
+
 
     }
 

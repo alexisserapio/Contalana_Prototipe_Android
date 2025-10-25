@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
 
     <ImageView
         android:id="@+id/welcome_squareblue"
@@ -85,9 +86,9 @@
         android:text="@string/welcome.terms"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="11sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:textSize="13sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:alpha="0"
         android:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"

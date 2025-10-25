@@ -5,7 +5,8 @@
     android:id="@+id/informative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".a.InformativeActivity">
+    tools:context=".a.ui.InformativeActivity"
+    android:background="@color/backgroundColor">
 
     <ImageView
         android:id="@+id/ivMockup"
@@ -84,8 +85,7 @@
         android:layout_marginBottom="30dp"
         android:text="@string/infoPoster.button"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:cornerRadius="12dp"
+        app:cornerRadius="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:backgroundTint="@color/CL_darkBlue"
