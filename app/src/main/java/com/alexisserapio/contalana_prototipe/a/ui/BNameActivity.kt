@@ -23,13 +23,15 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.lifecycleScope
 import com.alexisserapio.contalana_prototipe.R
+import com.alexisserapio.contalana_prototipe.a.data.DataStoreManager
+import com.alexisserapio.contalana_prototipe.a.data.dataStore
 import com.alexisserapio.contalana_prototipe.a.encryption.EncryptedPrefs
 import com.alexisserapio.contalana_prototipe.databinding.ActivityBnameBinding
 import com.google.crypto.tink.Aead
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-val Context.dataStore by preferencesDataStore(name = "USER_PREFERENCES_BUSSINESNAME")
+
 class BNameActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityBnameBinding
@@ -98,15 +100,14 @@ class BNameActivity : AppCompatActivity() {
             }else{
 
                 lifecycleScope.launch (Dispatchers.IO){
+
                     saveValues(binding.etBName.text.toString())
-
+                    val segueToFormActivity = Intent(this@BNameActivity, FormActivity::class.java)
+                    startActivity(segueToFormActivity)
+                    finish()
                 }
 
-                val segueToFormActivity = Intent(this, FormActivity::class.java).apply{
-                    putExtra("BNAME_KEY", binding.etBName.text.toString())
-                }
-                startActivity(segueToFormActivity)
-                finish()
+
 
             }
         }
@@ -147,9 +148,9 @@ class BNameActivity : AppCompatActivity() {
 
     private suspend fun saveValues(businessName: String) {
         dataStore.edit { preferences ->
-            preferences[stringPreferencesKey("businessName")] = businessName
-            preferences[booleanPreferencesKey("businessExists")] = true
-            preferences[booleanPreferencesKey("productExists")] = false
+            preferences[DataStoreManager.BUSINESS_NAME] = businessName
+            preferences[DataStoreManager.BUSINESS_EXISTS] = true
+            preferences[DataStoreManager.PRODUCT_EXISTS] = false
         }
     }
 

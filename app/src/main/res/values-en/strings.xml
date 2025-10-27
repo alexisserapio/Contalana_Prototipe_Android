@@ -29,6 +29,30 @@
     <string name="bName.alert.notValid">Use between 5 and 32 characters, including letters, numbers, and the symbols: . _ $ &amp; /</string>
     <string name="bName.alert.button">Ok</string>
 
-    <!-- Tutorial? Activity -->
-    <string name="tutorialstring">We are ready to start a new age in %1$s!</string>
+    <!-- Form Activity -->
+    <string name="formString">We are ready to start a new age in %1$s!</string>
+    <string name="buildingString">Here goes a form about some information about the business, work in progess!!</string>
+    <string name="formButton">Continue</string>
+
+    <!-- Tab Bar Activity -->
+    <string name="item.one">Home</string>
+    <string name="item.two">Inventory</string>
+    <string name="item.three">Management</string>
+    <string name="item.four">Planning</string>
+
+    <!-- Home Screen -->
+    <string name="homeScene.welcome">Welcome %1$s</string>
+
+    <!-- Inventory Screen -->
+    <string name="inventoryScene.welcome">%1$s Inventory</string>
+
+    <!-- Managment Screen -->
+    <string name="managementScene.welcome">%1$s Management</string>
+
+    <!-- Planning Scene -->
+    <string name="planningScene.welcome">%1$s Planning</string>
+
+    <!-- Utils -->
+    <string name="hello_blank_fragment">Testing Fragment!!</string>
+
 </resources>

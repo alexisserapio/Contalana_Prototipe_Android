@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contalana_Prototipe">
         <activity
-            android:name=".a.ui.BNameDialogActivity"
+            android:name=".a.ui.TabBarActivity"
             android:exported="false" />
         <activity
             android:name=".a.ui.SignInActivity"
@@ -30,6 +30,9 @@
             android:exported="false" />
         <activity
             android:name=".a.ui.welcomeActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".a.ui.LauncherSelectorActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
