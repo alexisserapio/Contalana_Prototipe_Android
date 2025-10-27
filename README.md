@@ -31,6 +31,15 @@ El objetivo del prototipo es construir una base sólida para la interfaz de usua
 
 ---
 
+# Funcionalidades Implementadas hasta el Modulo 7 del Diplomado: 
+- Se añadió la **Base de datos de la aplicación** utilizando la librería **Room** que constituye el eje central del proyecto.
+- Se añadieron las **tablas** a utilizar dentro de la base.
+- Se añadió **conexión a un endpoint** para solicitar información dada una **URL**.
+- Se añadió **persistencia** en la app utilizando **DataStore**.
+
+
+---
+
 ## ⚙️ Requisitos  
 - **Android Studio** (versión Arctic Fox o superior)  
 - **JDK 11** o compatible  
