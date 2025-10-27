@@ -27,19 +27,19 @@ data class ProductEntity(
     @ColumnInfo(name = "location")
     var string: String,
     @ColumnInfo(name = "added_product_date")
-    var addedProductDate: Date,
+    var addedProductDate: String,
     @ColumnInfo(name = "branch")
     var branch: String,
     @ColumnInfo(name = "brand")
     var brand: String,
-    @ColumnInfo(name = "amount")
+    @ColumnInfo(name = "code")
     var code: String,
     @ColumnInfo(name = "last_purchase_date")
-    var lastPurchaseDate: Date,
+    var lastPurchaseDate: String,
     @ColumnInfo(name = "max_price")
     var maxPrice: Float,
     @ColumnInfo(name = "min_price")
     var minPrice: Int,
     @ColumnInfo(name = "image")
-    var image: BinaryFormat
+    var image: String
 )
